@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+  <title>語言轉換</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/addons/p5.sound.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/jquery-3.5.1.js">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js">
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="container">
+      <h2>Input</h2>
+      <textarea id="input" style="height:200px; width:500px"></textarea>
+      <br>
+      <br>
+      <input id="run_R2E" type="button" value="俄→英">
+      &nbsp
+      <input id="run_E2R" type="button" value="英→俄">
+      <hr>
+      <h2>Output</h2>
+      <textarea id="output" style="height:200px; width:500px"></textarea>
+  </div>
+
+  <script>
+    $('#run_R2E').bind('click', function() {
+      transform("R2E");
+    });
+
+    $('#run_E2R').bind('click', function() {
+      transform("E2R");
+    });
+  </script>
+</body>
+
+</html>
